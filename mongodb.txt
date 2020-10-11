@@ -1,0 +1,10 @@
+https://cloud.mongodb.com/v2/5f2f4b46dd663c59faa69c71#clusters
+mongo db atlas:
+uid:saranyadhay.mca@gmail.com	
+pwd:Mongodb@1234
+
+cluster Name:ClusterCalixEMS
+
+database user credential:
+uid:calixuser
+pwd:calixuserpwd
