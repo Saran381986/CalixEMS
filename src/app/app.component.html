@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Calix Network</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/device" routerLinkActive="active">Device </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/maps" routerLinkActive="active">Maps </a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <!-- <li class="nav-item"> -->
+        <a class="nav-link" *ngIf="!_authService.loggedIn()" routerLink="/login" routerLinkActive="active">Login </a>
+      <!-- </li> -->
+      <!-- <li class="nav-item"> -->
+        <a class="nav-link" *ngIf="!_authService.loggedIn()" routerLink="/register" routerLinkActive="active">Registration </a>
+      <!-- </li> -->
+      <a class="nav-link" style="cursor:pointer" *ngIf="_authService.loggedIn()" (click)="_authService.logoutUser()">Logout</a>
+    </ul>
+  </div>
+
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
